@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-body: #f5f5f5;
+  --c-body-fg-solid: 0, 0, 0;
+  --c-body-fg-primary: 0, 0, 0, 0.84;
+  --c-body-fg-secondary: 0, 0, 0, 0.64;
+  --c-body-fg-disabled: 0, 0, 0, 0.34;
+  --c-body-fg-destructive: #c13d60;
+
+  --c-accent: orange;
+  --c-accent-fg-solid: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-body: #111;
+    --c-body-fg-solid: 255, 255, 255;
+    --c-body-fg-primary: 255, 255, 255, 0.92;
+    --c-body-fg-secondary: 255, 255, 255, 0.74;
+    --c-body-fg-disabled: 255, 255, 255, 0.46;
+    --c-body-fg-destructive: #de4b72;
+  }
+}
+
+@layer base {
+  html {
+    @apply min-h-screen scroll-smooth;
+    -webkit-tap-highlight-color: transparent;
+    color-scheme: light;
+  }
+
+  body {
+    @apply min-h-screen bg-body text-body-fg-primary;
+    font-family: var(--font-sans);
+  }
+
+  button {
+    @apply select-none outline-offset-4 focus:[&:not(:focus-visible)]:outline-none;
+  }
+
+  ::selection {
+    @apply bg-accent text-accent-fg-solid;
+  }
+}
+
+@layer utilities {
+  .layout-padding {
+    @apply px-4 sm:px-[5vw] 2xl:px-0;
+  }
+
+  .layout-width-limiter {
+    @apply mx-auto my-0 max-w-screen-xl;
+  }
+
+  .lock-scroll {
+    @apply fixed w-full overflow-y-scroll;
+  }
+}
