@@ -1,7 +1,7 @@
 'use client';
 
-import { ClientSafeProvider } from 'next-auth/react';
 import React from 'react';
+import { ClientSafeProvider } from 'next-auth/react';
 
 import { SignInWithProviderButtonController } from '~modules/auth/controllers/sign-in-with-provider-button-controller';
 import { AuthPage } from '~modules/auth/views/auth-page';

@@ -3,10 +3,9 @@
 import React from 'react';
 
 import { SignInWithProviderButtonProps } from '~modules/auth/views/sign-in-with-provider-button';
-
-import { Stylable, cn } from '~ui:styles/index';
-
 import { ChildrenWithProps } from '~utils/types';
+
+import { cn, Stylable } from '~ui:styles/index';
 
 /* -------------------------------------------------------------------------------------------------
  * AuthPage
@@ -41,20 +40,20 @@ const AuthPage = ({ className, children }: AuthPageProps) => {
           </div>
         ) : (
           <div className='mt-24 flex w-full flex-col gap-y-2'>
-            <p className='text-body-fg-destructive'>
+            <p className='text-body-foreground-destructive'>
               Sorry, you cannot login at this moment.
             </p>
-            <p className='text-sm text-body-fg-secondary'>
+            <p className='text-body-foreground-primary text-sm'>
               See this error?{' '}
               <a
-                className='text-body-fg-primary underline'
+                className='text-body-foreground-secondary underline'
                 href='https://github.com/letelete/justgocycle.app/issues'
               >
                 Report it
               </a>
               , or contact me at{' '}
               <a
-                className='text-body-fg-primary underline'
+                className='text-body-foreground-primary underline'
                 href='mailto:brunokawka@gmail.com'
               >
                 brunokawka@gmail.com

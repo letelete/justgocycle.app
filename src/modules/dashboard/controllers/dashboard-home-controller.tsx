@@ -3,7 +3,7 @@
 import { type Session } from 'next-auth';
 import { signOut } from 'next-auth/react';
 
-import { DashboardHome } from '~/modules/dashboard/views/dashboard-home';
+import { DashboardHome } from '~modules/dashboard/views/dashboard-home';
 
 /* -------------------------------------------------------------------------------------------------
  * DashboardHomeController

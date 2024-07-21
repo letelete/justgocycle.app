@@ -1,4 +1,4 @@
-import { DEBUG_MODE } from '~/config/constants';
+import { DEBUG_MODE } from '~config/constants';
 
 /* -------------------------------------------------------------------------------------------------
  * DebugTailwindIndicator
@@ -10,7 +10,7 @@ const DebugTailwindIndicator = () => {
   }
 
   return (
-    <div className='text-debug-fg bg-debug/50 border-body-fg fixed bottom-2 left-2 z-50 flex items-center justify-center rounded-md border p-1 text-xs backdrop-blur-md'>
+    <div className='fixed bottom-2 left-2 z-50 flex items-center justify-center rounded-md border border-body-foreground bg-debug/50 p-1 text-xs text-debug-foreground backdrop-blur-md'>
       <div className='block sm:hidden'>xs</div>
       <div className='hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden'>
         sm

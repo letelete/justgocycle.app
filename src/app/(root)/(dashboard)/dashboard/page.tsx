@@ -2,8 +2,8 @@
 
 import { type Session } from 'next-auth';
 
-import { getCurrentSession } from '~/lib/session';
-import { DashboardHomeController } from '~/modules/dashboard/controllers/dashboard-home-controller';
+import { getCurrentSession } from '~lib/session';
+import { DashboardHomeController } from '~modules/dashboard/controllers/dashboard-home-controller';
 
 export default async function DashboardPage() {
   const session = await getCurrentSession();

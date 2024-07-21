@@ -1,5 +1,5 @@
-import { MotionProps } from 'framer-motion';
 import React from 'react';
+import { MotionProps } from 'framer-motion';
 
 import { ChildrenWithProps, OneOf, RequireAtLeastOne } from '~utils/types';
 

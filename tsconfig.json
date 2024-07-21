@@ -29,15 +29,14 @@
 
     /* Paths */
     "paths": {
-      "~/*": ["src/*"],
       "~api/*": ["src/app/api/*"],
       "~config/*": ["src/config/*"],
       "~lib/*": ["src/lib/*"],
       "~modules/*": ["src/modules/*"],
+      "~utils/*": ["src/utils/*"],
       "~ui:components/*": ["src/ui/components/*"],
       "~ui:hooks/*": ["src/ui/hooks/*"],
-      "~ui:styles/*": ["src/ui/styles/*"],
-      "~utils/*": ["src/utils/*"]
+      "~ui:styles/*": ["src/ui/styles/*"]
     }
   },
   "include": [

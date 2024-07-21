@@ -2,8 +2,7 @@ import { AnimatePresence, HTMLMotionProps, motion } from 'framer-motion';
 
 import { SpokeSpinningLoader } from '~ui:components/atoms/loader';
 import { Transition } from '~ui:components/atoms/transition';
-
-import { cn } from '~ui:styles/index';
+import { cn, tw } from '~ui:styles/index';
 
 /* -------------------------------------------------------------------------------------------------
  * SignInWithProviderButton
@@ -38,17 +37,23 @@ const SignInWithProviderButton = ({
         <AnimatePresence mode='popLayout'>
           {isPending ? (
             <Transition enterExit='fade'>
-              <SpokeSpinningLoader color='yellow' size='sm' />
+              <SpokeSpinningLoader
+                layout
+                color={tw.theme.colors.body.foreground.secondary}
+                size='sm'
+              />
             </Transition>
           ) : null}
         </AnimatePresence>
 
-        <motion.p>Continue with {providerName}</motion.p>
+        <motion.p layout className='text-body-foreground-primary'>
+          Continue with {providerName}
+        </motion.p>
       </motion.button>
 
       <div className='flex w-full' aria-live='polite' aria-atomic='true'>
         {errorMessage ? (
-          <p className='text-body-fg-destructive'>{errorMessage}</p>
+          <p className='text-body-foreground-destructive'>{errorMessage}</p>
         ) : null}
       </div>
     </>

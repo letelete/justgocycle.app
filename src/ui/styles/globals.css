@@ -4,31 +4,42 @@
 
 @layer base {
   :root {
-    --c-body: #f5f5f5;
-    --c-body-fg: black;
-    --c-body-fg-primary: rgba(0, 0, 0, 0.84);
-    --c-body-fg-secondary: rgba(0, 0, 0, 0.64);
-    --c-body-fg-disabled: rgba(0, 0, 0, 0.34);
-    --c-body-fg-destructive: #c13d60;
+    --color-body: 0, 0%, 96%;
+    --color-body-foreground: 0, 0%, 0%;
+    --color-body-foreground-primary: 0, 0%, 0%, 0.87;
+    --color-body-foreground-secondary: 0, 0%, 0%, 0.6;
+    --color-body-foreground-disabled: 0, 0%, 0%, 0.38;
+    --color-body-foreground-decorative: 0, 0%, 0%, 0.16;
+    --color-body-foreground-destructive: 344, 52%, 50%;
 
-    --c-accent: orange;
-    --c-accent-fg: white;
+    --color-accent: 39, 100%, 50%;
+    --color-accent-foreground: 0, 0%, 100%;
 
-    --c-debug: rgb(0, 0, 0);
-    --c-debug-fg: white;
+    --color-destructive: 344, 52%, 50%;
+    --color-destructive-foreground: 0, 0%, 100%;
+
+    --color-debug: 0, 0%, 100%;
+    --color-debug-foreground: 0, 0%, 0%;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --c-body: #111;
-      --c-body-fg: white;
-      --c-body-fg-primary: rgba(255, 255, 255, 0.92);
-      --c-body-fg-secondary: rgba(255, 255, 255, 0.74);
-      --c-body-fg-disabled: rgba(255, 255, 255, 0.46);
-      --c-body-fg-destructive: #de4b72;
+      --color-body: 0, 0%, 7%;
+      --color-body-foreground: 0, 0%, 100%, 1;
+      --color-body-foreground-primary: 0, 0%, 100%, 0.87;
+      --color-body-foreground-secondary: 0, 0%, 100%, 0.6;
+      --color-body-foreground-disabled: 0, 0%, 100%, 0.38;
+      --color-body-foreground-decorative: 0, 0%, 100%, 0.16;
+      --color-body-foreground-destructive: 344, 52%, 50%, 1;
 
-      --c-accent: #ffc760;
-      --c-accent-fg: #111;
+      --color-accent: 39, 100%, 69%;
+      --color-accent-foreground: 0, 0%, 7%, 1;
+
+      --color-destructive: 344, 52%, 50%;
+      --color-destructive-foreground: 0, 0%, 100%, 1;
+
+      --color-debug: 0, 0%, 0%;
+      --color-debug-foreground: 0, 0%, 100%, 1;
     }
   }
 
@@ -37,17 +48,13 @@
   }
 
   ::selection {
-    @apply text-accent-fg bg-accent;
+    @apply bg-accent text-accent-foreground;
   }
 }
 
 @layer utilities {
   .layout-padding {
     @apply px-4 sm:px-[5vw] 2xl:px-0;
-  }
-
-  .layout-width-limiter {
-    @apply mx-auto my-0 max-w-screen-xl;
   }
 
   .lock-scroll {
@@ -61,6 +68,6 @@
 
 @layer components {
   .layout-base {
-    @apply layout-padding layout-width-limiter;
+    @apply layout-padding container mx-auto my-0;
   }
 }

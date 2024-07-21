@@ -1,8 +1,9 @@
-import type { Config } from 'tailwindcss';
 import pluginTailwindCssAnimate from 'tailwindcss-animate';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
-const config: Config = {
+import type { Config } from 'tailwindcss';
+
+const config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     fontFamily: {
@@ -10,30 +11,37 @@ const config: Config = {
     },
     colors: {
       body: {
-        DEFAULT: 'var(--c-body)',
-        fg: {
-          DEFAULT: 'var(--c-body-fg)',
-          primary: 'var(--c-body-fg-primary)',
-          secondary: 'var(--c-body-fg-secondary)',
-          disabled: 'var(--c-body-fg-disabled)',
-          destructive: 'var(--c-body-fg-destructive)',
+        DEFAULT: 'hsla(var(--color-body), <alpha-value>)',
+        foreground: {
+          DEFAULT: 'hsla(var(--color-body-foreground))',
+          primary: 'hsla(var(--color-body-foreground-primary))',
+          secondary: 'hsla(var(--color-body-foreground-secondary))',
+          disabled: 'hsla(var(--color-body-foreground-disabled))',
+          decorative: 'hsla(var(--color-body-foreground-decorative))',
+          destructive: 'hsla(var(--color-body-foreground-destructive))',
         },
       },
       accent: {
-        DEFAULT: 'var(--c-accent)',
-        fg: {
-          DEFAULT: 'var(--c-accent-fg)',
+        DEFAULT: 'hsla(var(--color-accent), <alpha-value>)',
+        foreground: {
+          DEFAULT: 'hsla(var(--color-accent-foreground), <alpha-value>)',
+        },
+      },
+      destructive: {
+        DEFAULT: 'hsla(var(--color-destructive), <alpha-value>)',
+        foreground: {
+          DEFAULT: 'hsla(var(--color-destructive-foreground), <alpha-value>)',
         },
       },
       debug: {
-        DEFAULT: 'var(--c-debug-tool)',
-        fg: {
-          DEFAULT: 'var(--c-debug-tool-fg)',
+        DEFAULT: 'hsla(var(--color-debug-tool), <alpha-value>)',
+        foreground: {
+          DEFAULT: 'hsla(var(--color-debug-tool-foreground), <alpha-value>)',
         },
       },
     },
   },
   plugins: [pluginTailwindCssAnimate],
-};
+} as const satisfies Config;
 
 export default config;

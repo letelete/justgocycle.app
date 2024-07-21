@@ -1,9 +1,9 @@
+import React from 'react';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { Loader } from 'lucide-react';
-import React from 'react';
 import { mergeRefs } from 'react-merge-refs';
-import { useElementGeometry } from '~ui:hooks/use-element-geometry';
 
+import { useElementGeometry } from '~ui:hooks/use-element-geometry';
 import { cn } from '~ui:styles/index';
 
 /* -------------------------------------------------------------------------------------------------

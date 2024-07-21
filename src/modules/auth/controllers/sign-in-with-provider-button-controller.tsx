@@ -1,10 +1,9 @@
 'use client';
 
-import { ClientSafeProvider, signIn } from 'next-auth/react';
 import React from 'react';
+import { ClientSafeProvider, signIn } from 'next-auth/react';
 
-import { logger } from '~/lib/logger';
-
+import { logger } from '~lib/logger';
 import { SignInWithProviderButton } from '~modules/auth/views/sign-in-with-provider-button';
 
 import { Stylable } from '~ui:styles/index';

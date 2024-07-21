@@ -6,8 +6,7 @@ import {
   DEBUG_MODE,
   STRAVA_CLIENT_ID,
   STRAVA_CLIENT_SECRET,
-} from '~/config/constants';
-
+} from '~config/constants';
 import { db } from '~lib/db';
 
 export const authOptions = {
