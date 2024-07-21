@@ -1,12 +1,14 @@
+import { type Session } from 'next-auth';
+
 import { getCurrentSession } from '~/lib/session';
+import { DashboardHomeController } from '~/modules/dashboard/controllers/dashboard-home-controller';
 
 export default async function DashboardPage() {
   const session = await getCurrentSession();
-  return (
-    <main className='flex min-h-screen flex-col'>
-      <h1>Dashboard</h1>
 
-      <p>Hello, {session?.user.name} 👋</p>
-    </main>
-  );
+  if (!session?.user) {
+    return null;
+  }
+
+  return <DashboardHomeController user={session.user as Session['user']} />;
 }
