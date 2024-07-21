@@ -15,4 +15,4 @@ export const STRAVA_CLIENT_ID = init('STRAVA_CLIENT_ID');
 
 export const STRAVA_CLIENT_SECRET = init('STRAVA_CLIENT_SECRET');
 
-export const DEBUG_MODE = init('DEBUG_MODE') === 'true';
+export const DEBUG_MODE = init('DEBUG_MODE', true) === 'true';
