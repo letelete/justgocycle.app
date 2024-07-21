@@ -1,5 +1,5 @@
 import { MotionProps } from 'framer-motion';
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 import { ChildrenWithProps, OneOf, RequireAtLeastOne } from '~utils/types';
 
@@ -34,7 +34,7 @@ type TransitionProps = {
   }>
 >;
 
-const Transition = React.forwardRef<ReactElement, TransitionProps>(
+const Transition = React.forwardRef<React.ReactElement, TransitionProps>(
   ({ children, enterExit, enter, exit }, ref) => {
     const child = React.Children.only(children);
 

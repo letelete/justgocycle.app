@@ -3,6 +3,8 @@
 import { ClientSafeProvider, signIn } from 'next-auth/react';
 import React from 'react';
 
+import { logger } from '~/lib/logger';
+
 import { SignInWithProviderButton } from '~modules/auth/views/sign-in-with-provider-button';
 
 import { Stylable } from '~ui:styles/index';
@@ -26,8 +28,10 @@ const SignInWithProviderButtonController = ({
     try {
       setIsPending(true);
       await signIn(provider.id);
-    } catch (error) {
-      setErrorMessage((error as Error).message);
+    } catch (e) {
+      const error = e as Error;
+      setErrorMessage(error.message);
+      logger.error(SignInWithProviderButtonController.displayName, error);
     } finally {
       setIsPending(false);
     }

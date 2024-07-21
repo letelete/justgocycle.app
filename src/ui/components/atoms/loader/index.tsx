@@ -1,6 +1,6 @@
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { Loader } from 'lucide-react';
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { mergeRefs } from 'react-merge-refs';
 import { useElementGeometry } from '~ui:hooks/use-element-geometry';
 
@@ -52,7 +52,7 @@ interface SpokeSpinningLoaderProps extends Partial<LoaderContainerProps> {
   color?: string;
 }
 
-const SpokeSpinningLoader = forwardRef<
+const SpokeSpinningLoader = React.forwardRef<
   React.ElementRef<typeof LoaderContainer>,
   SpokeSpinningLoaderProps
 >(({ size = 'md', color = 'slate', ...rest }, ref) => {

@@ -37,13 +37,13 @@ const SignInWithProviderButton = ({
         layout
         {...rest}
       >
-<AnimatePresence mode='popLayout'>
-  {isPending ? (
-    <Transition enterExit='fade'>
-      <SpokeSpinningLoader color='yellow' size='sm' />
-    </Transition>
-  ) : null}
-</AnimatePresence>
+        <AnimatePresence mode='popLayout'>
+          {isPending ? (
+            <Transition enterExit='fade'>
+              <SpokeSpinningLoader color='yellow' size='sm' />
+            </Transition>
+          ) : null}
+        </AnimatePresence>
 
         <motion.p>Continue with {providerName}</motion.p>
       </motion.button>
