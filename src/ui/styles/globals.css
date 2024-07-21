@@ -2,39 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --c-body: #f5f5f5;
-  --c-body-fg-solid: 0, 0, 0;
-  --c-body-fg-primary: 0, 0, 0, 0.84;
-  --c-body-fg-secondary: 0, 0, 0, 0.64;
-  --c-body-fg-disabled: 0, 0, 0, 0.34;
-  --c-body-fg-destructive: #c13d60;
-
-  --c-accent: orange;
-  --c-accent-fg-solid: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --c-body: #111;
-    --c-body-fg-solid: 255, 255, 255;
-    --c-body-fg-primary: 255, 255, 255, 0.92;
-    --c-body-fg-secondary: 255, 255, 255, 0.74;
-    --c-body-fg-disabled: 255, 255, 255, 0.46;
-    --c-body-fg-destructive: #de4b72;
-  }
-}
-
 @layer base {
-  html {
-    @apply min-h-screen scroll-smooth;
-    -webkit-tap-highlight-color: transparent;
-    color-scheme: light;
+  :root {
+    --c-body: #f5f5f5;
+    --c-body-fg-solid: black;
+    --c-body-fg-primary: rgba(0, 0, 0, 0.84);
+    --c-body-fg-secondary: rgba(0, 0, 0, 0.64);
+    --c-body-fg-disabled: rgba(0, 0, 0, 0.34);
+    --c-body-fg-destructive: #c13d60;
+
+    --c-accent: orange;
+    --c-accent-fg-solid: #fff;
   }
 
-  body {
-    @apply min-h-screen bg-body text-body-fg-primary;
-    font-family: var(--font-sans);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --c-body: #111;
+      --c-body-fg-solid: white;
+      --c-body-fg-primary: rgba(255, 255, 255, 0.92);
+      --c-body-fg-secondary: rgba(255, 255, 255, 0.74);
+      --c-body-fg-disabled: rgba(255, 255, 255, 0.46);
+      --c-body-fg-destructive: #de4b72;
+
+      --c-accent: #ffc760;
+      --c-accent-fg-solid: #111;
+    }
   }
 
   button {
@@ -57,5 +49,15 @@
 
   .lock-scroll {
     @apply fixed w-full overflow-y-scroll;
+  }
+
+  .no-tap-highlight-mobile {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .layout-base {
+    @apply layout-padding layout-width-limiter;
   }
 }

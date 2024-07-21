@@ -29,10 +29,13 @@
 
     /* Paths */
     "paths": {
+      "~/*": ["src/*"],
       "~api/*": ["src/app/api/*"],
-      "~constants/*": ["src/constants/*"],
+      "~config/*": ["src/config/*"],
+      "~lib/*": ["src/lib/*"],
+      "~modules/*": ["src/modules/*"],
       "~ui:components/*": ["src/ui/components/*"],
-      "~ui:modules/*": ["src/ui/modules/*"],
+      "~ui:hooks/*": ["src/ui/hooks/*"],
       "~ui:styles/*": ["src/ui/styles/*"],
       "~utils/*": ["src/utils/*"]
     }

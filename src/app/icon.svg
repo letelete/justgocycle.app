@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512">
+  <g clip-path="url(#a)">
+    <rect width="512" height="512" fill="url(#b)" rx="24"/>
+    <g clip-path="url(#c)">
+      <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="39.81" d="m306.83 383.08 108.02-108.02a62.9 62.9 0 1 0-88.95-88.96L186.1 325.9a62.9 62.9 0 0 1-88.95-88.96l108.02-108.02"/>
+      <circle cx="205" cy="129" r="8" fill="#F87125"/>
+      <circle cx="307" cy="383" r="12" fill="#F77723"/>
+      <circle cx="307" cy="383" r="12" fill="#F77723"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <rect width="512" height="512" fill="#fff" rx="24"/>
+    </clipPath>
+    <clipPath id="c">
+      <path fill="#fff" d="M-49 256 256-49l305 305-305 305z"/>
+    </clipPath>
+    <linearGradient id="b" x1="0" x2="512" y1="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF512F"/>
+      <stop offset="1" stop-color="#F09819"/>
+    </linearGradient>
+  </defs>
+</svg>

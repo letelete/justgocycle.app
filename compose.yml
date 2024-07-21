@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=justgocycleapp
+    ports:
+      - 6500:5432
