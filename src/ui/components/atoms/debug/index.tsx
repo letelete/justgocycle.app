@@ -1,12 +1,16 @@
+import { DEBUG_MODE } from '~/config/constants';
+
 /* -------------------------------------------------------------------------------------------------
- * TailwindIndicator
+ * DebugTailwindIndicator
  * -----------------------------------------------------------------------------------------------*/
 
-const TailwindIndicator = () => {
-  if (process.env.NODE_ENV === 'production') return null;
+const DebugTailwindIndicator = () => {
+  if (!DEBUG_MODE) {
+    return null;
+  }
 
   return (
-    <div className='bg-gray-800 font-mono text-white fixed bottom-1 left-1 z-50 flex h-6 w-6 items-center justify-center rounded-full p-3 text-xs'>
+    <div className='text-debug-fg bg-debug/50 border-body-fg fixed bottom-2 left-2 z-50 flex items-center justify-center rounded-md border p-1 text-xs backdrop-blur-md'>
       <div className='block sm:hidden'>xs</div>
       <div className='hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden'>
         sm
@@ -21,4 +25,4 @@ const TailwindIndicator = () => {
 
 /* -----------------------------------------------------------------------------------------------*/
 
-export { TailwindIndicator };
+export { DebugTailwindIndicator };

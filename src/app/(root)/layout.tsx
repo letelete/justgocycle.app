@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 
-import { TailwindIndicator } from '~/ui/components/atoms/tailwind-indicator';
+import { DebugTailwindIndicator } from '~/ui/components/atoms/debug';
 
 import '~ui:styles/globals.css';
 import { cn } from '~ui:styles/index';
@@ -32,7 +32,8 @@ export default function RootLayout({
         )}
       >
         {children}
-        <TailwindIndicator />
+
+        <DebugTailwindIndicator />
       </body>
     </html>
   );

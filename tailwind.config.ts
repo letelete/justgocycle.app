@@ -12,7 +12,7 @@ const config: Config = {
       body: {
         DEFAULT: 'var(--c-body)',
         fg: {
-          solid: 'var(--c-body-fg-solid)',
+          DEFAULT: 'var(--c-body-fg)',
           primary: 'var(--c-body-fg-primary)',
           secondary: 'var(--c-body-fg-secondary)',
           disabled: 'var(--c-body-fg-disabled)',
@@ -22,7 +22,13 @@ const config: Config = {
       accent: {
         DEFAULT: 'var(--c-accent)',
         fg: {
-          solid: 'var(--c-accent-fg-solid)',
+          DEFAULT: 'var(--c-accent-fg)',
+        },
+      },
+      debug: {
+        DEFAULT: 'var(--c-debug-tool)',
+        fg: {
+          DEFAULT: 'var(--c-debug-tool-fg)',
         },
       },
     },
