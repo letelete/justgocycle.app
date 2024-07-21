@@ -1,3 +1,5 @@
+'use server';
+
 import { type Session } from 'next-auth';
 
 import { getCurrentSession } from '~/lib/session';

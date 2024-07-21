@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
+'use server';
 
-export default function HomePage() {
-  redirect('/dashboard');
+import { RedirectType, redirect } from 'next/navigation';
+
+export default async function HomePage() {
+  redirect('/dashboard', RedirectType.replace);
 }
