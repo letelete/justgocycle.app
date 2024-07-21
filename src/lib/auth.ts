@@ -2,12 +2,16 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import type { NextAuthOptions } from 'next-auth';
 import StravaProvider from 'next-auth/providers/strava';
 
-import { STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET } from '~/config/constants';
+import {
+  DEBUG_MODE,
+  STRAVA_CLIENT_ID,
+  STRAVA_CLIENT_SECRET,
+} from '~/config/constants';
 
 import { db } from '~lib/db';
 
 export const authOptions = {
-  secret: process.env.AUTH_SECRET,
+  debug: DEBUG_MODE,
   adapter: PrismaAdapter(db),
   session: {
     strategy: 'jwt',
